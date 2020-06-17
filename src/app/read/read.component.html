@@ -1,0 +1,11 @@
+<div class="right" *ngIf="playlist$">
+  <h3>Your Playlist</h3>
+  <ul>
+    <li
+      (click)="removeSong(i)"
+      *ngFor="let song of playlist$ | async; let i = index"
+    >
+      <a [href]="song.url" target="_blank">{{ song.title }}</a>
+    </li>
+  </ul>
+</div>
