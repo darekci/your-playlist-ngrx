@@ -1,4 +1,5 @@
 <div class="right" *ngIf="playlist$">
+  <app-spinner *ngIf="isLoading$ | async"></app-spinner>
   <h3>Your Playlist</h3>
   <ul>
     <li

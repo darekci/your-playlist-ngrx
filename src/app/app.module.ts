@@ -15,9 +15,10 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 import { reducers, effects } from "./store";
 import { HttpClientModule } from "@angular/common/http";
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
-  declarations: [AppComponent, ReadComponent, CreateComponent],
+  declarations: [AppComponent, ReadComponent, CreateComponent, SpinnerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
