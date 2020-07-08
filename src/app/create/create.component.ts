@@ -13,10 +13,8 @@ import * as fromStore from "../store";
 export class CreateComponent {
   private currentId = 2;
 
-  // Section 1
   constructor(private store: Store<AppState>) {}
 
-  // Section 2
   addSong(title: string, url: string) {
     this.currentId += 1;
 

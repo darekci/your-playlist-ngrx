@@ -2,10 +2,7 @@
   <app-spinner *ngIf="isLoading$ | async"></app-spinner>
   <h3>Your Playlist</h3>
   <ul>
-    <li
-      (click)="removeSong(i)"
-      *ngFor="let song of playlist$ | async; let i = index"
-    >
+    <li *ngFor="let song of playlist$ | async; let i = index">
       <a [href]="song.url" target="_blank">{{ song.title }}</a>
     </li>
   </ul>

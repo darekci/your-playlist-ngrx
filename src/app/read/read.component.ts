@@ -11,21 +11,14 @@ import * as fromStore from "../store";
   styleUrls: ["./read.component.scss"],
 })
 export class ReadComponent implements OnInit {
-  // Section 1
   isLoading$: Observable<boolean>;
   playlist$: Observable<Song[]>;
 
-  // Section 2
   constructor(private store: Store<fromStore.AppState>) {}
 
   ngOnInit(): void {
     this.isLoading$ = this.store.select(fromStore.getSongsLoading);
     this.playlist$ = this.store.select(fromStore.getAllSongs);
     this.store.dispatch(new fromStore.LoadSongs());
-  }
-
-  // Section 3
-  removeSong(index) {
-    //   this.store.dispatch(new PlaylistActions.RemoveSong(index));
   }
 }

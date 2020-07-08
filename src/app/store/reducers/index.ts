@@ -14,10 +14,8 @@ export const reducers: ActionReducerMap<AppState> = {
   playlist: fromSongs.reducer,
 };
 
-// App State
 export const getAppState = createFeatureSelector<AppState>("playlist");
 
-// Playlist State
 export const getPlaylistState = createSelector(
   getAppState,
   (state: AppState) => state.playlist

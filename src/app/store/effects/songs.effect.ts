@@ -3,11 +3,9 @@ import { Actions, ofType, Effect } from "@ngrx/effects";
 import { switchMap, map, catchError } from "rxjs/operators";
 import { PlaylistService } from "src/app/services/playlist.service";
 
-// Section 1
 import * as songsActions from "../actions";
 import { of } from "rxjs/internal/observable/of";
 
-// Section 2
 @Injectable()
 export class SongsEffects {
   constructor(
@@ -15,7 +13,6 @@ export class SongsEffects {
     private playlistService: PlaylistService
   ) {}
 
-  // Section 3
   @Effect()
   loadSongs$ = this.actions$.pipe(
     ofType(songsActions.LOAD_SONGS),

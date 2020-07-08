@@ -1,19 +1,16 @@
 import * as fromSongs from "../actions";
 import { Song } from "src/app/models/song.model";
 
-// Section 1
 export interface PlaylistState {
   data: Song[];
   loading: boolean;
 }
 
-// Section 2
 export const initialState = {
   data: [],
   loading: false,
 };
 
-// Section 3
 export function reducer(
   state = initialState,
   action: fromSongs.SongsLoadAction | fromSongs.SongsAddAction
@@ -68,6 +65,5 @@ export function reducer(
   }
 }
 
-// Section 4
 export const getSongsLoading = (state: PlaylistState) => state.loading;
 export const getSongs = (state: PlaylistState) => state.data;
